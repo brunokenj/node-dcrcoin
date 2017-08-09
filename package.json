@@ -1,5 +1,5 @@
 {
-  "name": "node-eth-rpc",
+  "name": "node-dcr-rpc",
   "description": "Communicate with dcrd and dcrwallet via JSON-RPC",
   "version": "0.0.1",
   "main": "lib/index.js",

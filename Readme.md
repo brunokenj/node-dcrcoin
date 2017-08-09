@@ -1,4 +1,4 @@
-# node-ethcoin
+# node-dcrcoin
 
 node-dcrcoin is a simple wrapper for the dcrd and dcrwallet client's JSON-RPC API.
 
