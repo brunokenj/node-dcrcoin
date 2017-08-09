@@ -1,0 +1,25 @@
+{
+  "name": "node-eth-rpc",
+  "description": "Communicate with dcrd and dcrwallet via JSON-RPC",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "keywords": [
+    "decred",
+    "decred wallet",
+    "dcrctl",
+    "dcrd",
+    "dcrwallet",
+    "rpc"
+  ],
+  "author": "Bruno Kenj <bruno.kenj@gmail.com>",
+  "dependencies": {
+    "deprecate": "~0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brunokenj/node-dcrcoin"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
