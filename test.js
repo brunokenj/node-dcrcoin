@@ -8,7 +8,7 @@ var dcrd = new dcrcoin.Client({
   user: 'brunokenj',
   pass: 'J6BINJBX5pCnrr1P5RO87na3DNLPsvv/',
   ssl: true
-  ,sslCa: fs.readFileSync('~/.dcrd/rpc.cert')
+  //,sslCa: fs.readFileSync('~/.dcrd/rpc.cert')
 });
 
 dcrd.cmd('getinfo', function(err, info){
@@ -23,7 +23,7 @@ var dcrwallet = new dcrcoin.Client({
   user: 'brunokenj',
   pass: 'J6BINJBX5pCnrr1P5RO87na3DNLPsvv/',
   ssl: true
-  ,sslCa: fs.readFileSync('~/.dcrd/rpc.cert')
+  //,sslCa: fs.readFileSync('~/.dcrd/rpc.cert')
 });
 
 var accountName = Date.now().toString();
