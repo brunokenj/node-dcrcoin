@@ -61,3 +61,14 @@ dcrdAndDcrWallet.cmd('wallet', 'listaccounts', function(err, wallets){
   if (err) return console.log(err);
   console.log('listaccounts:', wallets);
 });
+
+// Use like methods.
+dcrdAndDcrWallet.getinfo(function(err, info) {
+  if (err) return console.log(err);
+  console.log('info:', info);
+});
+
+dcrdAndDcrWallet.wallet.listaccounts(function (err, accounts) {
+  if (err) return console.log(err);
+  console.log('listaccounts:', accounts);
+});

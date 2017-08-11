@@ -20,7 +20,16 @@ var dcrd = new dcrcoin.Client({
 });
 ```
 
-### Get Info
+### Get Info with Method
+
+```js
+dcrd.getinfo(function(err, info){
+  if (err) return console.log(err);
+  console.log('getinfo:', info);
+});
+```
+
+### Get Info with Command
 
 ```js
 dcrd.cmd('getinfo', function(err, info){
@@ -61,6 +70,30 @@ dcrwallet.cmd('createnewaccount', accountName, function(err, wallets){
 dcrwallet.cmd('listaccounts', function(err, wallets){
   if (err) return console.log(err);
   console.log('listaccounts:', wallets);
+});
+```
+
+### Using DCRD and DCRWALLET in same Client
+
+```js
+var dcrdAndDcrWallet = new dcrcoin.Client({
+  host: '127.0.0.1',
+  dcrdPort: 19109, // dcrd port
+  dcrWalletPort: 19110, // dcrwallet port
+  user: 'brunokenj',
+  pass: 'J6BINJBX5pCnrr1P5RO87na3DNLPsvv/',
+  ssl: true
+  //,sslCa: fs.readFileSync('~/.dcrd/rpc.cert')
+});
+
+dcrdAndDcrWallet.getinfo(function(err, info) {
+  if (err) return console.log(err);
+  console.log('info:', info);
+});
+
+dcrdAndDcrWallet.wallet.listaccounts(function (err, accounts) {
+  if (err) return console.log(err);
+  console.log('listaccounts:', accounts);
 });
 ```
 
